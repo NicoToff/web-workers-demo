@@ -1,0 +1,20 @@
+:root {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+
+    --primary: #007acc;
+    --comment: #6b9a56;
+    --background: #007acc20;
+}
+
+body {
+    color: rgb(245, 254, 250);
+    background-color: rgb(15, 17, 21);
+    padding: 8px;
+}
+
+button {
+    cursor: pointer;
+}
