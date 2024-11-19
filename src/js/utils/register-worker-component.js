@@ -4,8 +4,8 @@ export function registerWorkerComponent({
     workerCallback,
 }) {
     const fetchButton = document.querySelector(ctaButtonId);
-    const worker = new Worker(workerFilePath, { type: "module" });
     fetchButton.addEventListener("click", () => {
+        const worker = new Worker(workerFilePath, { type: "module" });
         workerCallback?.(worker);
     });
 }

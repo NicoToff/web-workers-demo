@@ -19,6 +19,7 @@ const workerCallback = (worker) => {
         } else {
             result.classList.add("adding-content");
             result.textContent = `${result.textContent}\n${message}`;
+            worker.terminate();
         }
     };
 };
