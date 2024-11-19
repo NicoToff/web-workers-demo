@@ -9,10 +9,14 @@
     --background: #007acc20;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     color: rgb(245, 254, 250);
     background-color: rgb(15, 17, 21);
-    padding: 8px;
+    padding: 16px;
 }
 
 button {

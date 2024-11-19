@@ -1,12 +1,22 @@
 * {
     text-rendering: optimizeLegibility;
-    text-wrap: balance;
+    text-wrap: pretty;
+}
+
+.main-title,
+.secondary-title {
+    &:hover {
+        &::after {
+            content: "#";
+            color: var(--background);
+        }
+    }
 }
 
 .main-title {
     font-size: 2.5rem;
-    margin-block: 3rem 1.75rem;
-    line-height: 1.5rem;
+    margin-block: 4rem 2.25rem;
+    line-height: 3.35rem;
     font-weight: 700;
 
     &:first-child {
@@ -16,8 +26,8 @@
 
 .secondary-title {
     font-size: 1.85rem;
-    margin-block: 2rem 1.25rem;
-    line-height: 1.45rem;
+    margin-block: 4rem 1.75rem;
+    line-height: 2.25rem;
     font-weight: 600;
 }
 
@@ -41,7 +51,7 @@
 }
 
 p {
-    margin-bottom: 1.5rem;
+    margin-block: 1.5rem;
 }
 
 blockquote {
@@ -66,24 +76,36 @@ code {
 }
 
 pre {
-    margin-block: 1rem;
+    margin-block: 1.5rem;
     padding: 1.5rem;
-    max-height: 100px;
+    max-height: 5rem;
     overflow: auto;
     transition: max-height ease-in-out 1s;
 
     &.adding-content {
-        max-height: 500px;
+        max-height: 32rem;
     }
 
     .comment {
         color: var(--comment);
     }
 }
-
+p > a {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
 select {
     border-radius: 3px;
     background-color: var(--background);
     color: white;
     padding-inline: 0.5rem;
+}
+p + ul {
+    margin-top: -0.75rem;
+}
+li:before {
+    content: "O";
+    font-weight: 700;
+    padding-right: 0.5rem;
+    color: var(--background);
 }

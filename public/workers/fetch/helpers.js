@@ -6,7 +6,3 @@ export async function getTimeData(timeZone = "Europe/Amsterdam") {
         .then((r) => r.json())
         .catch(console.error);
 }
-
-export async function wait(ms) {
-    return new Promise((r) => setTimeout(r, ms));
-}

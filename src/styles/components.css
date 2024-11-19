@@ -1,0 +1,44 @@
+.spinner {
+    --scaler: 1;
+    @media (min-width: 640px) {
+        --scaler: 1.25;
+    }
+    @media (min-width: 768px) {
+        --scaler: 1.5;
+    }
+    @media (min-width: 1024px) {
+        --scaler: 2;
+    }
+    @media (min-width: 1280px) {
+        --scaler: 3;
+    }
+
+    --pos: calc(6px * var(--scaler) * var(--scaler));
+
+    position: fixed;
+    top: var(--pos);
+    right: var(--pos);
+    backdrop-filter: blur(2px);
+    border-radius: 100vw;
+
+    width: 48px;
+    height: 48px;
+    transform: scale(var(--scaler));
+
+    span {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+footer {
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: var(--background) solid 1px;
+}
