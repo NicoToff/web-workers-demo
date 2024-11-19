@@ -92,7 +92,11 @@ pre {
 }
 p > a {
     text-decoration: underline;
-    text-underline-offset: 4px;
+    text-underline-offset: 3px;
+
+    &:hover {
+        text-decoration: none;
+    }
 }
 select {
     border-radius: 3px;
