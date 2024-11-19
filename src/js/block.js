@@ -6,7 +6,14 @@ const blockButton = document.querySelector("#block-1-example");
 const stutterButton = document.querySelector("#block-2-example");
 const result = document.querySelector("#block-result");
 
-blockButton.addEventListener("click", () => blockMainThread(1000));
+blockButton.addEventListener("click", () => {
+    blockButton.disabled = true;
+    blockMainThread(500);
+    setTimeout(() => {
+        blockButton.disabled = false;
+    }, 2000);
+});
+
 stutterButton.addEventListener("click", () => stutter());
 
 const workerCallback = (worker) => {
