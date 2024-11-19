@@ -11,6 +11,7 @@ Clone the project, install the dependencies and run the dev server
 ```bash
 git clone <repo>
 cd web-workers
+corepack enable
 pnpm i
 pnpm dev
 ```
